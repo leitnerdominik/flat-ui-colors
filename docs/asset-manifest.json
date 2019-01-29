@@ -1,14 +1,14 @@
 {
-  "main.css": "/static/css/main.8f043afe.chunk.css",
-  "main.js": "/static/js/main.2e810477.chunk.js",
-  "main.js.map": "/static/js/main.2e810477.chunk.js.map",
-  "static/js/1.e545d94a.chunk.js": "/static/js/1.e545d94a.chunk.js",
-  "static/js/1.e545d94a.chunk.js.map": "/static/js/1.e545d94a.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/alert.mp3": "/static/media/alert.d3b3ccc5.mp3",
-  "static/css/main.8f043afe.chunk.css.map": "/static/css/main.8f043afe.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.e776fcce8e271b48c954c3261489f301.js": "/precache-manifest.e776fcce8e271b48c954c3261489f301.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/flat-ui-colors/static/css/main.8f043afe.chunk.css",
+  "main.js": "/flat-ui-colors/static/js/main.48ceb1fe.chunk.js",
+  "main.js.map": "/flat-ui-colors/static/js/main.48ceb1fe.chunk.js.map",
+  "static/js/1.e545d94a.chunk.js": "/flat-ui-colors/static/js/1.e545d94a.chunk.js",
+  "static/js/1.e545d94a.chunk.js.map": "/flat-ui-colors/static/js/1.e545d94a.chunk.js.map",
+  "runtime~main.js": "/flat-ui-colors/static/js/runtime~main.3581b3e1.js",
+  "runtime~main.js.map": "/flat-ui-colors/static/js/runtime~main.3581b3e1.js.map",
+  "static/media/alert.mp3": "/flat-ui-colors/static/media/alert.d3b3ccc5.mp3",
+  "static/css/main.8f043afe.chunk.css.map": "/flat-ui-colors/static/css/main.8f043afe.chunk.css.map",
+  "index.html": "/flat-ui-colors/index.html",
+  "precache-manifest.a678bc5ff415b207714f51508932e496.js": "/flat-ui-colors/precache-manifest.a678bc5ff415b207714f51508932e496.js",
+  "service-worker.js": "/flat-ui-colors/service-worker.js"
 }
