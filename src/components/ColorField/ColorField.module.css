@@ -1,0 +1,45 @@
+.Container {
+  width: 20%;
+  height: 25%;
+  position: relative;
+  cursor: pointer;
+}
+
+.Container:hover .Btn {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.Container span {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 18px;
+  padding: 6px 12px;
+}
+
+.Btn {
+  background: transparent;
+  border: 3px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.Btn:hover {
+  cursor: pointer;
+}
+
+.Btn:focus {
+  outline: none;
+}
+/*# sourceMappingURL=ColorField.module.css.map */

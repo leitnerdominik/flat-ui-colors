@@ -1,0 +1,57 @@
+.Container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+}
+
+.MessageContainer {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.Message {
+  font-size: 6vw;
+  color: white;
+  -webkit-animation: transparentText 0.5s;
+          animation: transparentText 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.Color {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2vw;
+}
+
+@-webkit-keyframes transparentText {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes transparentText {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+/*# sourceMappingURL=FeedbackMessage.module.css.map */
