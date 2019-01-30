@@ -3,10 +3,10 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import classes from "./ColorField.module.css";
 
-const colorField = ({ color, clicked }) => {
+const colorField = ({ copyText, color, clicked }) => {
   return (
     <CopyToClipboard
-    text={color}
+    text={copyText}
     onCopy={() => console.log("COPIED ", color)}
   >
     <div
@@ -17,7 +17,7 @@ const colorField = ({ color, clicked }) => {
       className={classes.Container}
     >
       <button className={classes.Btn}>COPY</button>
-      <span>{color}</span>
+      <span>{copyText}</span>
     </div>
     </CopyToClipboard>
   );

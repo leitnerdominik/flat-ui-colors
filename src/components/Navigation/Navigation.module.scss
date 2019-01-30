@@ -1,0 +1,81 @@
+.DropdownContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  height: 48px;
+  position: relative;
+  font-family: 'Concert One', cursive;
+}
+/* Reset Select */
+.Select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #ED4C67;
+  background-image: none;
+}
+/* Custom Select */
+.Dropdown {
+  position: relative;
+  display: block;
+  width: 17em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  // overflow: hidden;
+  border-radius: 0.25em;
+
+  &::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    background: #ED4C67;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    color: #2d3436;
+  }
+  &::after {
+    -webkit-transition: 0.25s all ease;
+    -o-transition: 0.25s all ease;
+    transition: 0.25s all ease;
+  }
+}
+.Select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 0.5em;
+  color: #2d3436;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: 'Concert One', cursive;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.Title {
+  font-size: 1.4rem;
+  padding: 0 12px;
+}
+
+.Volume {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  cursor: pointer;
+  
+}

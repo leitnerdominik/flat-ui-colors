@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./FeedbackMessage.module.css";
 
-const feedbackMessage = ({color}) => {
+const feedbackMessage = ({color, copyText}) => {
 
     const messages = ["It will rock!", "Great choice!", "Paste me!", "Copied!"];
 
@@ -14,7 +14,7 @@ const feedbackMessage = ({color}) => {
             <div className={classes.MessageContainer}>
             <span className={classes.Message}>{messages[randomMessageIndex]}</span>
             </div>
-            <span className={classes.Color}>{color}</span>
+            <span className={classes.Color}>{copyText}</span>
         </div>
     );
 };
