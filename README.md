@@ -120,3 +120,8 @@ Then publish with:
 ```bash
 npm run deploy
 ```
+
+`npm run deploy` runs `npm run build` first through the `predeploy` script, then
+publishes the `build/` directory with `gh-pages`. If the live site still shows
+an older bundle after deployment, hard-refresh the browser or wait a few minutes
+for GitHub Pages and browser caches to update.
