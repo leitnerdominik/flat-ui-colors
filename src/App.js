@@ -10,7 +10,9 @@ import alarm from "./assets/sounds/alert.mp3";
 
 import "./App.css";
 
-class App extends Component {
+export const FEEDBACK_DURATION_MS = 1000;
+
+export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,6 +25,13 @@ class App extends Component {
     this.fields = 20;
     this.colorFields = [];
     this.feedback = null;
+    this.feedbackTimer = null;
+    this.feedbackAudio = null;
+  }
+
+  componentWillUnmount() {
+    this.clearFeedbackTimer();
+    this.pauseFeedbackAudio();
   }
 
   createColorFields() {
@@ -50,15 +59,51 @@ class App extends Component {
     this.setState({ showFeedback: true });
     this.feedback = feedback;
 
-    const audio = new Audio(alarm);
-    if (this.state.soundOn) {
-      audio.play();
+    this.playFeedbackSound();
+    this.startFeedbackTimer();
+  }
+
+  clearFeedbackTimer() {
+    if (this.feedbackTimer) {
+      clearTimeout(this.feedbackTimer);
+      this.feedbackTimer = null;
+    }
+  }
+
+  pauseFeedbackAudio() {
+    if (this.feedbackAudio) {
+      this.feedbackAudio.pause();
+      this.feedbackAudio = null;
+    }
+  }
+
+  playFeedbackSound() {
+    this.pauseFeedbackAudio();
+
+    if (!this.state.soundOn) {
+      return;
     }
 
-    setTimeout(() => {
-      audio.pause();
+    const audio = new Audio(alarm);
+    this.feedbackAudio = audio;
+
+    try {
+      const playResult = audio.play();
+
+      if (playResult && typeof playResult.catch === "function") {
+        playResult.catch(() => {});
+      }
+    } catch {}
+  }
+
+  startFeedbackTimer() {
+    this.clearFeedbackTimer();
+
+    this.feedbackTimer = setTimeout(() => {
+      this.pauseFeedbackAudio();
       this.setState({ showFeedback: false });
-    }, 1000);
+      this.feedbackTimer = null;
+    }, FEEDBACK_DURATION_MS);
   }
 
   changeCopyFormat(event) {
