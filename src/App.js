@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ColorField from "./components/ColorField/ColorField";
 import FeedbackMessage from "./components/FeedbackMessage/FeedbackMessage";
 import Navigation from "./components/Navigation/Navigation";
+import { formatColorValues } from "./utils/colorFormat";
 import { COLORS } from "./utils/colorPalette";
 
 import alarm from "./assets/sounds/alert.mp3";
@@ -64,41 +65,10 @@ class App extends Component {
     this.setState({ copyFormat: event.target.value }, this.calcColor);
   }
 
-  hexToRgb(colors, rgba = false) {
-    const convertedColors = colors.map(color => {
-      const hex = color.slice(1, color.length);
-      const bigint = parseInt(hex, 16);
-      const r = (bigint >> 16) & 255;
-      const g = (bigint >> 8) & 255;
-      const b = bigint & 255;
-      let a = "";
-      if (rgba) {
-        a = ", 1.0";
-      }
-
-      return `rgb(${r}, ${g}, ${b}${a})`;
-    });
-
-    return convertedColors;
-  }
-
   calcColor() {
-    switch (this.state.copyFormat) {
-      case "hex":
-        const hexColors = COLORS.map(color => color.slice(1, color.length));
-        this.setState({ colors: hexColors });
-        break;
-      case "rgb":
-        const rgbColors = this.hexToRgb(COLORS);
-        this.setState({ colors: rgbColors });
-        break;
-      case "rgba":
-        const rgbaColors = this.hexToRgb(COLORS, true);
-        this.setState({ colors: rgbaColors });
-        break;
-      default:
-        this.setState({ colors: COLORS });
-    }
+    this.setState({
+      colors: formatColorValues(COLORS, this.state.copyFormat)
+    });
   }
 
   toggleSoundHandler() {
