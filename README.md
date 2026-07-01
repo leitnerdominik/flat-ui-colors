@@ -15,9 +15,15 @@ Flat UI Colors is a compact React app for browsing a fixed color palette and cop
 
 ## Screenshot
 
-Screenshot placeholder: add a final desktop or mobile screenshot here before portfolio publication.
+![Flat UI Colors app preview](assets/screenshots/flat-ui-colors-demo.png)
 
-Recommended path: `docs/screenshots/flat-ui-colors-demo.png`
+## Technical Highlights
+
+- React 19-compatible entry point and current direct dependencies.
+- Pure color-formatting utilities with focused unit tests.
+- Keyboard-accessible color tiles, sound toggle, and visible focus states.
+- Responsive palette grid with mobile-friendly copy feedback.
+- Documented CSS Modules workflow, deployment process, and CRA audit status.
 
 ## Tech Stack
 
