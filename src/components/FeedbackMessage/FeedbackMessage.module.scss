@@ -9,7 +9,7 @@
 
 .MessageContainer {
     background: rgba(255, 255, 255, 0.4);
-    padding: 50px;
+    padding: clamp(28px, 7vw, 56px) 16px;
     position: absolute;
     top: 50%;
     width: 100%;
@@ -22,7 +22,9 @@
 }
 
 .Message {
-    font-size: 6vw;
+    display: block;
+    font-size: clamp(2.25rem, 8vw, 6rem);
+    line-height: 1.05;
     color: white;
     animation: transparentText 0.5s;
     animation-delay: 0.5s;
@@ -33,7 +35,11 @@
     top: 70%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2vw;
+    max-width: calc(100vw - 32px);
+    font-size: clamp(1rem, 4.5vw, 2rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    text-align: center;
 }
 
 @keyframes transparentText {
