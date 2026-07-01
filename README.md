@@ -42,6 +42,26 @@ configuration. The project does not currently use a formatter dependency;
 follow the existing style when editing files: two-space indentation, semicolons,
 double quotes in application code, and colocated `*.test.js` files for tests.
 
+## Security and Tooling Status
+
+As of the latest `npm audit`, the project reports 28 vulnerabilities
+(9 low, 6 moderate, 13 high, 0 critical). The findings are transitive through
+Create React App's `react-scripts` toolchain rather than the app's own color
+palette runtime code.
+
+- Runtime app: no separate production app dependency finding is currently
+  identified outside the CRA dependency graph.
+- Build-time tooling: findings include SVG processing, CSS minification,
+  Workbox, PostCSS, and serialization packages used by `react-scripts`.
+- Dev/test tooling: findings include Jest/jsdom and webpack dev-server related
+  packages.
+
+The current decision is to keep CRA for this portfolio version and document the
+risk instead of applying `npm audit fix --force`, because the suggested fixes
+would effectively replace or break the CRA toolchain. If this project needs a
+longer-lived maintenance posture, handle that as a separate Vite migration goal
+with its own dependency, build, test, and deployment validation.
+
 ## Local Setup
 
 Install dependencies:
