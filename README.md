@@ -29,7 +29,18 @@ Recommended path: `docs/screenshots/flat-ui-colors-demo.png`
 
 ## Styling Workflow
 
-Component styles use plain CSS Modules. Edit the `ComponentName.module.css` file next to each component, for example `src/components/ColorField/ColorField.module.css`. Sass files and CSS source maps are not part of the active workflow and are ignored to keep one clear style source of truth.
+Component styles use plain CSS Modules. Edit the `ComponentName.module.css`
+file next to each component, for example
+`src/components/ColorField/ColorField.module.css`. Sass files and CSS source
+maps are not part of the active workflow and are ignored to keep one clear
+style source of truth.
+
+## Code Quality
+
+Run `npm run lint` to check JavaScript files with the Create React App ESLint
+configuration. The project does not currently use a formatter dependency;
+follow the existing style when editing files: two-space indentation, semicolons,
+double quotes in application code, and colocated `*.test.js` files for tests.
 
 ## Local Setup
 
@@ -60,6 +71,12 @@ npm test
 ```
 
 Runs the React Scripts test runner in watch mode.
+
+```bash
+npm run lint
+```
+
+Runs ESLint against JavaScript files in `src/`.
 
 ```bash
 npm test -- --watchAll=false
