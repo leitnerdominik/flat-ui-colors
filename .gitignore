@@ -11,6 +11,10 @@
 AGENTS.md
 /docs
 
+# generated/legacy style artifacts
+*.module.css.map
+*.module.scss
+
 # production
 /build
 

@@ -27,6 +27,10 @@ Recommended path: `docs/screenshots/flat-ui-colors-demo.png`
 - `react-copy-to-clipboard`
 - GitHub Pages via `gh-pages`
 
+## Styling Workflow
+
+Component styles use plain CSS Modules. Edit the `ComponentName.module.css` file next to each component, for example `src/components/ColorField/ColorField.module.css`. Sass files and CSS source maps are not part of the active workflow and are ignored to keep one clear style source of truth.
+
 ## Local Setup
 
 Install dependencies:
