@@ -20,6 +20,12 @@ describe("color format utilities", () => {
     );
   });
 
+  it("formats valid palette values with leading zero channels", () => {
+    expect(formatRgbColor("#00b894")).toBe("rgb(0, 184, 148)");
+    expect(formatRgbColor("#0984e3")).toBe("rgb(9, 132, 227)");
+    expect(formatRgbaColor("#00cec9")).toBe("rgb(0, 206, 201, 1.0)");
+  });
+
   it("formats hex values as the existing rgba copy string", () => {
     expect(formatRgbaColor("#55efc4")).toBe("rgb(85, 239, 196, 1.0)");
     expect(formatColorValue("#2d3436", COPY_FORMATS.RGBA)).toBe(
