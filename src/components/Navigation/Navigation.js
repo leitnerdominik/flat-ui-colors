@@ -9,18 +9,30 @@ const navigation = ({ changed, toggleSound, soundOn }) => {
 
   return (
     <div className={classes.DropdownContainer}>
-      <h3 className={classes.Title}>Copy Format: </h3>
+      <label className={classes.Title} htmlFor="copy-format">
+        Copy Format:
+      </label>
       <div className={classes.Dropdown}>
-        <select className={classes.Select} onChange={changed}>
+        <select
+          id="copy-format"
+          className={classes.Select}
+          onChange={changed}
+        >
           <option value="hex-hash">HEX(#AB11FF)</option>
           <option value="hex">HEX(AB11FF)</option>
           <option value="rgb">RGB(240, 255, 0)</option>
           <option value="rgba">RGBA(240, 255, 0, 0.3)</option>
         </select>
       </div>
-      <div className={classes.Volume} onClick={toggleSound}>
-        <i className={volumeClass} />
-      </div>
+      <button
+        type="button"
+        className={classes.Volume}
+        onClick={toggleSound}
+        aria-label={soundOn ? "Turn sound off" : "Turn sound on"}
+        aria-pressed={soundOn}
+      >
+        <i className={volumeClass} aria-hidden="true" />
+      </button>
     </div>
   );
 };

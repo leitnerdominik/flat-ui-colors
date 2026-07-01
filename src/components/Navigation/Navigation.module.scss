@@ -14,7 +14,6 @@
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  outline: 0;
   box-shadow: none;
   border: 0 !important;
   background: #ED4C67;
@@ -64,9 +63,16 @@
   &::-ms-expand {
     display: none;
   }
+
+  &:focus,
+  &:focus-visible {
+    outline: 3px solid #2d3436;
+    outline-offset: 3px;
+  }
 }
 
 .Title {
+  display: block;
   font-size: 1.4rem;
   padding: 0 12px;
 }
@@ -77,5 +83,17 @@
   transform: translateY(-50%);
   right: 30px;
   cursor: pointer;
-  
+  min-width: 40px;
+  min-height: 40px;
+  border: 0;
+  background: transparent;
+  color: #2d3436;
+  font: inherit;
+  padding: 0;
+
+  &:focus,
+  &:focus-visible {
+    outline: 3px solid #2d3436;
+    outline-offset: 4px;
+  }
 }

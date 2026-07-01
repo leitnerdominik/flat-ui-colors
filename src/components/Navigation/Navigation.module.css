@@ -24,7 +24,6 @@
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
   border: 0 !important;
@@ -78,7 +77,14 @@
   display: none;
 }
 
+.Select:focus,
+.Select:focus-visible {
+  outline: 3px solid #2d3436;
+  outline-offset: 3px;
+}
+
 .Title {
+  display: block;
   font-size: 1.4rem;
   padding: 0 12px;
 }
@@ -90,5 +96,18 @@
           transform: translateY(-50%);
   right: 30px;
   cursor: pointer;
+  min-width: 40px;
+  min-height: 40px;
+  border: 0;
+  background: transparent;
+  color: #2d3436;
+  font: inherit;
+  padding: 0;
+}
+
+.Volume:focus,
+.Volume:focus-visible {
+  outline: 3px solid #2d3436;
+  outline-offset: 4px;
 }
 /*# sourceMappingURL=Navigation.module.css.map */

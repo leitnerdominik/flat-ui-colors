@@ -3,15 +3,28 @@
   height: 25%;
   position: relative;
   cursor: pointer;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
 }
 
-.Container:hover .Btn {
+.Container:hover .Btn,
+.Container:focus .Btn,
+.Container:focus-visible .Btn {
   opacity: 1;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 
-.Container span {
+.Container:focus,
+.Container:focus-visible {
+  outline: 4px solid #ffffff;
+  outline-offset: -8px;
+  z-index: 1;
+}
+
+.ColorValue {
   color: white;
   position: absolute;
   bottom: 0;
@@ -39,7 +52,4 @@
   cursor: pointer;
 }
 
-.Btn:focus {
-  outline: none;
-}
 /*# sourceMappingURL=ColorField.module.css.map */
