@@ -1,5 +1,5 @@
 {
-  "short_name": "flat-ui-colors",
+  "short_name": "Flat UI",
   "name": "Flat UI Colors",
   "icons": [
     {
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ED4C67",
+  "background_color": "#b53471"
 }
