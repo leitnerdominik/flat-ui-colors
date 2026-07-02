@@ -15,7 +15,7 @@ Flat UI Colors is a compact React app for browsing a fixed color palette and cop
 
 ## Screenshot
 
-![Flat UI Colors app preview](assets/screenshots/flat-ui-colors-demo.png)
+![Flat UI Colors app preview](assets/flat-ui-colors-demo.png)
 
 ## Technical Highlights
 
@@ -32,41 +32,6 @@ Flat UI Colors is a compact React app for browsing a fixed color palette and cop
 - CSS Modules
 - `react-copy-to-clipboard`
 - GitHub Pages via `gh-pages`
-
-## Styling Workflow
-
-Component styles use plain CSS Modules. Edit the `ComponentName.module.css`
-file next to each component, for example
-`src/components/ColorField/ColorField.module.css`. Sass files and CSS source
-maps are not part of the active workflow and are ignored to keep one clear
-style source of truth.
-
-## Code Quality
-
-Run `npm run lint` to check JavaScript files with the Create React App ESLint
-configuration. The project does not currently use a formatter dependency;
-follow the existing style when editing files: two-space indentation, semicolons,
-double quotes in application code, and colocated `*.test.js` files for tests.
-
-## Security and Tooling Status
-
-As of the latest `npm audit`, the project reports 28 vulnerabilities
-(9 low, 6 moderate, 13 high, 0 critical). The findings are transitive through
-Create React App's `react-scripts` toolchain rather than the app's own color
-palette runtime code.
-
-- Runtime app: no separate production app dependency finding is currently
-  identified outside the CRA dependency graph.
-- Build-time tooling: findings include SVG processing, CSS minification,
-  Workbox, PostCSS, and serialization packages used by `react-scripts`.
-- Dev/test tooling: findings include Jest/jsdom and webpack dev-server related
-  packages.
-
-The current decision is to keep CRA for this portfolio version and document the
-risk instead of applying `npm audit fix --force`, because the suggested fixes
-would effectively replace or break the CRA toolchain. If this project needs a
-longer-lived maintenance posture, handle that as a separate Vite migration goal
-with its own dependency, build, test, and deployment validation.
 
 ## Local Setup
 
@@ -146,8 +111,3 @@ Then publish with:
 ```bash
 npm run deploy
 ```
-
-`npm run deploy` runs `npm run build` first through the `predeploy` script, then
-publishes the `build/` directory with `gh-pages`. If the live site still shows
-an older bundle after deployment, hard-refresh the browser or wait a few minutes
-for GitHub Pages and browser caches to update.
